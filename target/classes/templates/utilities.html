@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <meta content="Guía 16 - Ejercicio 01" name="description" />
+  <meta content="Silvia R. Otaka" name="author" />
+  <title>Fragments</title>
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+
+<body>
+  <!-- NAVBAR INDEX -->
+  <nav th:fragment="navbar-index" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" th:href="@{/}"><img src="../../img/logo.png" width="200" height="40" /></a>
+      <a class="navbar-brand" th:href="@{/}">Inicio</a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-md-0 w-100">
+          <!--DROPDOWN AUTORES-->
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+              id="dropdown-autores" role="button">
+              Autores
+            </a>
+            <ul aria-labelledby="dropdown-autores" class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" th:href="@{/autores}">Listado de Autores</a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/autores/crear}">Registrar Autor</a>
+              </li>
+            </ul>
+          </li>
+          <!--DROPDOWN EDITORIALES-->
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+              id="dropdown-editoriales" role="button">
+              Editoriales
+            </a>
+            <ul aria-labelledby="dropdown-editoriales" class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" th:href="@{/editoriales}">Listado de Editoriales</a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/editoriales/crear}">Registrar Editorial</a>
+              </li>
+            </ul>
+          </li>
+          <!--DROPDOWN LIBROS-->
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+              id="dropdown-libros" role="button">
+              Libros
+            </a>
+            <ul aria-labelledby="dropdown-libros" class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" th:href="@{/libros}">Listado de Libros</a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/libros/crear}">Registrar Libro</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--DROPDOWN CLIENTES-->
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+              id="dropdown-clientes" role="button">
+              Clientes
+            </a>
+            <ul aria-labelledby="dropdown-clientes" class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" th:href="@{/clientes}">Listado de Clientes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/clientes/crear}">Registrar Cliente</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--TEAM-->
+          <li class="nav-item">
+            <a aria-expanded="false" class="nav-link" href="#team" role="button">
+              Nuestro Equipo
+            </a>
+          </li>
+
+          <!--ABOUT US-->
+          <li class="nav-item">
+            <a aria-expanded="false" class="nav-link" href="#contact-form" role="button">
+              Contáctanos
+            </a>
+          </li>
+
+      </div>
+  </nav>
+  <!-- END  NAVBAR INDEX -->
+
+  <!-- NAVBAR SIN FORUMULARIO DE CONTACTO NI ABOUT US-->
+  <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" th:href="@{/}"><img src="../../img/logo.png" width="200" height="40" /></a>
+      <a class="navbar-brand" th:href="@{/}">Inicio</a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-md-0 w-100">
+          <!--DROPDOWN AUTORES-->
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+              id="dropdown-autores" role="button">
+              Autores
+            </a>
+            <ul aria-labelledby="dropdown-autores" class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" th:href="@{/autores}">Listado de Autores</a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/autores/crear}">Registrar Autor</a>
+              </li>
+            </ul>
+          </li>
+          <!--DROPDOWN EDITORIALES-->
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+              id="dropdown-editoriales" role="button">
+              Editoriales
+            </a>
+            <ul aria-labelledby="dropdown-editoriales" class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" th:href="@{/editoriales}">Listado de Editoriales</a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/editoriales/crear}">Registrar Editorial</a>
+              </li>
+            </ul>
+          </li>
+          <!--DROPDOWN LIBROS-->
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+              id="dropdown-libros" role="button">
+              Libros
+            </a>
+            <ul aria-labelledby="dropdown-libros" class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" th:href="@{/libros}">Listado de Libros</a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/libros/crear}">Registrar Libro</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--DROPDOWN CLIENTES-->
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+              id="dropdown-clientes" role="button">
+              Clientes
+            </a>
+            <ul aria-labelledby="dropdown-clientes" class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" th:href="@{/clientes}">Listado de Clientes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" th:href="@{/clientes/crear}">Registrar Cliente</a>
+              </li>
+            </ul>
+          </li>
+      </div>
+  </nav>
+  <!-- END NAVBAR SIN FORUMULARIO DE CONTACTO NI ABOUT US-->
+
+  <!-- ERRORS -->
+  <div th:fragment="div-error" th:if=${error!=null}
+    class="alert alert-dismissible alert-danger disable mt-4 col-xl-4 text-center" th:text="${error}" id=alert>
+  </div>
+  <div th:fragment="div-exito" th:if=${exito!=null}
+    class="alert alert-dismissible alert-success disable mt-4 col-xl-4 text-center" th:text="${exito}" id=alert>
+  </div>
+  <!-- END ERRORS -->
+
+  <!-- ======= About us Section ======= -->
+
+  <section th:fragment="aboutus" class="page-section bg-light" id="team">
+    <div class="container">
+      <div class="text-center">
+        <br />
+        <h2 class="section-heading text-uppercase" id="team_text">
+          Nuestro increíble equipo
+        </h2>
+        <h3 class="section-subheading" id="conocelas">Conócenos</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/TeamMember01.png" alt="..." />
+            <h4>The Baroness</h4>
+            <p class="text-muted">CEO</p>
+            <a href="#"><img class="mx-auto" src="./img/icon_linkedin.png" style="width: 12%; height: 12%; border: none"
+                title="The Baroness Official LinkedIn Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_mail.png" style="width: 12%; height: 12%; border: none"
+                title="The Baroness Official Mail Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_web.png" style="width: 12%; height: 12%; border: none"
+                title="The Baroness Official Web Page" /></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/TeamMember02.png" alt="..." />
+            <h4>Diana Prince</h4>
+            <p class="text-muted">Finance Manager</p>
+            <a href="#"><img class="mx-auto" src="./img/icon_linkedin.png" style="width: 12%; height: 12%; border: none"
+                title="Diana Prince Official LinkedIn Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_mail.png" style="width: 12%; height: 12%; border: none"
+                title="Diana Prince Official Mail Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_web.png" style="width: 12%; height: 12%; border: none"
+                title="Diana Prince Official Web Page" /></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/TeamMember03.png" alt="..." />
+            <h4>Silvia Otaka</h4>
+            <p class="text-muted">Lead Developer</p>
+            <a href="#"><img class="mx-auto" src="./img/icon_linkedin.png" style="width: 12%; height: 12%; border: none"
+                title="Silvia Otaka Official LinkedIn Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_mail.png" style="width: 12%; height: 12%; border: none"
+                title="Silvia Otaka Official Mail Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_web.png" style="width: 12%; height: 12%; border: none"
+                title="Silvia Otaka Official Web Page" /></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/TeamMember04.png" alt="..." />
+            <h4>Gwen Stacy</h4>
+            <p class="text-muted">Lead Marketer</p>
+            <a href="#"><img class="mx-auto" src="./img/icon_linkedin.png" style="width: 12%; height: 12%; border: none"
+                title="Gwen Stacy Official LinkedIn Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_mail.png" style="width: 12%; height: 12%; border: none"
+                title="Gwen Stacy Official Mail Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_web.png" style="width: 12%; height: 12%; border: none"
+                title="Gwen Stacy Official Web Page" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <p class="large text-muted">
+            Proveemos soluciones integrales e inteligentes a nuestros
+            clientes, <br />
+            ayudándolos a lograr una ventaja competitiva sustentable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= End About us Section ======= -->
+
+  <!-- ======= Contact us Section ======= -->
+
+  <section th:fragment="contactus" class="contact-form" id="contact-form">
+    <!-- <section class="ftco-section"> -->
+    <div class="container">
+      <br><br>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section" id="contactanos-form">CONTÁCTANOS</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="wrapper img" style="background-image: url(img/contact-us-02.jpg)">
+            <div class="row">
+              <div class="col-md-9 col-lg-7">
+                <div class="contact-wrap w-100 p-md-5 p-4">
+                  <h3 class="mb-4">Envíenos su consulta</h3>
+                  <div id="form-message-warning" class="mb-4"></div>
+                  <div id="form-message-success" class="mb-4">
+                    Su mensaje ha sido enviado. ¡Muchas gracias!
+                  </div>
+                  <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label" for="name">Nombre y Apellido</label>
+                          <input type="text" class="form-control" name="name" id="name"
+                            placeholder="Nombre y Apellido" />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label" for="email">Email</label>
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="label" for="subject">Asunto</label>
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" />
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="label" for="#">Mensaje</label>
+                          <textarea name="message" class="form-control" id="message" cols="30" rows="4"
+                            placeholder="Escriba su mensaje aquí..."></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <br><br>
+                          <input type="submit" value="Enviar mensaje" class="btn btn-secondary" />
+                          <div class="submitting"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======= End Contact us Section ======= -->
+
+
+
+  <!-- FOOTER -->
+
+  <!-- <footer th:fragment="footer">
+    <div class="footer py-1 light bg-light fixed-bottom">
+        <div class="copyright text-center">
+          &copy; Copyright 2000-2021 |
+          <strong><span>Sakura Corporation</span></strong> | All rights reserved <br />
+          <img src="../../img/logo.png" width="200" height="40" />
+        </div>
+      </div>
+  </footer> -->
+  <!-- END FOOTER -->
+
+  <footer th:fragment="footer">
+    <div class="footer py-1 light bg-light fixed-bottom">
+        <div class="copyright text-center">
+          &copy; Copyright 2000-2021 |
+         <img src="../../img/logo.png" width="200" height="40" /> 
+         | All rights reserved
+        </div>
+      </div>
+  </footer>
+  
+</body>
+
+</html>

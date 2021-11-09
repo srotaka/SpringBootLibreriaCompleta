@@ -1,0 +1,437 @@
+header.masthead {
+  background-image: url(../img/landing02-min.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  text-align: center;
+  color: #f3969a;
+}
+
+header.masthead .masthead-subheading {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-top: 3rem;
+  font-family: "Carattere", cursive;
+}
+
+header.masthead .masthead-heading {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-top: 5rem;
+  font-family: "Roboto";
+}
+
+.sub-body {
+  background-image: url(../img/background-libreria03.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  padding-top: 0rem;
+  color: rgb(43, 42, 42) !important;
+}
+
+.btn-space {
+  margin-right: 5px;
+}
+
+#cards {
+  background-color: #f8c0c3 !important;
+  text-align: center;
+}
+
+.card-title {
+  font-family: "Roboto";
+  color: rgb(61, 58, 58) !important;
+}
+.card-text {
+  font-family: "Carattere", cursive;
+  font-size: 2rem;
+  color: rgb(61, 58, 58) !important;
+}
+
+.vert-align {
+  vertical-align: middle;
+}
+
+.index-libro {
+  background-image: url(../img/libro.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 200px;
+  margin-top: 9pt !important;
+}
+
+@media (max-width: 992px) {
+  .index-libros {
+    background-position: top;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.index-autor {
+  background-image: url(../img/autor.png);
+  background-position: left 25% center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 200px;
+  margin-top: 9pt !important;
+}
+
+@media (max-width: 992px) {
+  .index-autores {
+    background-position: top;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.index-editorial {
+  background-image: url(../img/editorial.png);
+  background-position: left 25% center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 33%;
+  height: 200px;
+  margin-top: 9pt !important;
+}
+
+@media (max-width: 992px) {
+  .index-editoriales {
+    background-position: top;
+    width: 100%;
+    height: 500px;
+  }
+}
+.clickable-card {
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.clickable-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 992px) {
+  .clickable-card:hover {
+    transform: scale(1.03);
+  }
+}
+
+.clickable-card > a {
+  color: rgb(39, 38, 38) !important;
+}
+
+.main {
+  margin-bottom: 4.5rem !important;
+}
+
+#encabezado {
+  text-align: center;
+  color: #ff7b90;
+  font-size: 3rem;
+  margin-top: 6rem;
+  font-family: Roboto;
+}
+
+#alert{
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+/*-------------------------------------------------------------
+TEAM 
+-------------------------------------------------------------*/
+.team-member {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.team-member img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
+.team-member h4,
+.team-member .h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+
+/*-------------------------------------------------------------
+CONTACT US FORM
+-------------------------------------------------------------*/
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  }
+
+/* .contact-form {
+  padding: 2rem 0;
+} */
+.contactForm .label {
+  color: rgb(51, 49, 49);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  
+}
+
+.contactForm .form-control {
+  border: none;
+}
+
+#contactForm .error {
+  color: red;
+  font-size: 12px;
+}
+
+#contactForm .form-control {
+  font-size: 16px;
+}
+
+#message {
+  resize: vertical;
+}
+
+#form-message-warning,
+#form-message-success {
+  display: none;
+}
+
+#form-message-warning {
+  color: red;
+}
+
+#form-message-success {
+  color: #28a745;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+/*-------------------------------------------------------------
+LOGIN IN PAGE
+-------------------------------------------------------------*/
+
+  
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+body{
+  font-family: 'Mukta', sans-serif;
+	height:100vh;
+	min-height:550px;
+	/* background-image: url(http://www.planwallpaper.com/static/images/Free-Wallpaper-Nature-Scenes.jpg); */
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+    overflow-y: hidden;
+}
+a{
+  text-decoration:none;
+  color:#444444;
+}
+.login-reg-panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+	text-align:center;
+    width:70%;
+	right:0;left:0;
+    margin:auto;
+    height:400px;
+    background-color: rgba(236, 48, 20, 0.9);
+}
+.white-panel{
+    background-color: rgba(255,255, 255, 1);
+    height:500px;
+    position:absolute;
+    top:-50px;
+    width:50%;
+    right:calc(50% - 50px);
+    transition:.3s ease-in-out;
+    z-index:0;
+    box-shadow: 0 0 15px 9px #00000096;
+}
+.login-reg-panel input[type="radio"]{
+    position:relative;
+    display:none;
+}
+.login-reg-panel{
+    color:#B8B8B8;
+}
+.login-reg-panel #label-login, 
+.login-reg-panel #label-register{
+    border:1px solid #9E9E9E;
+    padding:5px 5px;
+    width:150px;
+    display:block;
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight: 600;
+    font-size: 18px;
+}
+.login-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    left:0;
+    position:absolute;
+    text-align:left;
+}
+.register-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    right:0;
+    position:absolute;
+    text-align:left;
+    
+}
+.right-log{right:50px !important;}
+
+.login-show, 
+.register-show{
+    z-index: 1;
+    display:none;
+    opacity:0;
+    transition:0.3s ease-in-out;
+    color:#242424;
+    text-align:left;
+    padding:50px;
+}
+.show-log-panel{
+    display:block;
+    opacity:0.9;
+}
+.login-show input[type="text"], .login-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.login-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float:right;
+    cursor:pointer;
+}
+.login-show a{
+    display:inline-block;
+    padding:10px 0;
+}
+
+.register-show input[type="text"], .register-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.register-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float:right;
+    cursor:pointer;
+}
+.credit {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color: #3B3B25;
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 99;
+}
+a{
+  text-decoration:none;
+  color:#2c7715;
+}
+    
+/* ALTERNATIVO */
+
+
+.login-block{
+    background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+float:left;
+width:100%;
+padding : 50px 0;
+}
+.banner-sec{background:url(../img/login.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.banner-signup{background:url(../img/signup.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+.carousel-inner{border-radius:0 10px 10px 0;}
+.carousel-caption{text-align:left; left:5%;}
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.login-sec .copy-text i{color:#FEB58A;}
+.login-sec .copy-text a{color:#E36262;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-login{background: #DE6262; color:#fff; font-weight:600;}
+.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+.banner-text h2{color:#ff7b90; font-weight:300;  font-family: "Carattere";font-size: 45px; }
+.banner-text p{color:#ff7b90; font-family: "Roboto";font-size: 20px; }
+.banner-text-signup h2{color:#ff7b90; font-weight:300;  font-family: "Carattere";font-size: 45px; }
+.banner-text-signup p{color:#ff7b90; font-family: "Roboto";font-size: 20px; }
+.btn-registrar{background-color: #f3969a!important; border-color: #f3969a!important;}
+.form-control:focus {
+  color: #888;
+  background-color: #fff;
+  border-color: #f8abaf !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fad0d2 !important;
+}
+
+
+/* CALENDAR */
+#spanDate{color:#ff7b90; font-family: "Roboto";font-size: 16px; text-transform: uppercase;}
