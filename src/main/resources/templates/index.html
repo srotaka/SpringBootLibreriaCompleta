@@ -25,7 +25,7 @@
   <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
 </head>
 
-<body>
+<body style="overflow:scroll">
 
   <!-- ======= NAVBAR =======  -->
   <nav th:replace="utilities::navbar-index"></nav>
@@ -89,19 +89,160 @@
         </div>
       </div>
     </div>
-  </div>
+  
   <!-- =======  END CARDS =======  -->
-  <br><br><br>
 
-  <!-- ======= ABOUT US SECTION ======= -->
-  <section th:replace="utilities::aboutus"></section>
-  <!-- ======= END ABOUT US SECTION ======= -->
+  <!-- ======= About us Section ======= -->
 
-  <!-- ======= CONTACT US SECTION ======= -->
-  <section th:replace="utilities::contactus"></section>
+  <section class="page-section bg-light" id="team">
+    <div class="container">
+      <div class="text-center">
+        <br />
+        <h2 class="section-heading text-uppercase" id="team_text">
+          Nuestro increíble equipo
+        </h2>
+        <h3 class="section-subheading" id="conocelas">Conócenos</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/TeamMember01.png" alt="..." />
+            <h4>The Baroness</h4>
+            <p class="text-muted">CEO</p>
+            <a href="#"><img class="mx-auto" src="./img/icon_linkedin.png" style="width: 12%; height: 12%; border: none"
+                title="The Baroness Official LinkedIn Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_mail.png" style="width: 12%; height: 12%; border: none"
+                title="The Baroness Official Mail Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_web.png" style="width: 12%; height: 12%; border: none"
+                title="The Baroness Official Web Page" /></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/TeamMember02.png" alt="..." />
+            <h4>Diana Prince</h4>
+            <p class="text-muted">Finance Manager</p>
+            <a href="#"><img class="mx-auto" src="./img/icon_linkedin.png" style="width: 12%; height: 12%; border: none"
+                title="Diana Prince Official LinkedIn Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_mail.png" style="width: 12%; height: 12%; border: none"
+                title="Diana Prince Official Mail Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_web.png" style="width: 12%; height: 12%; border: none"
+                title="Diana Prince Official Web Page" /></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/TeamMember03.png" alt="..." />
+            <h4>Silvia Otaka</h4>
+            <p class="text-muted">Lead Developer</p>
+            <a href="#"><img class="mx-auto" src="./img/icon_linkedin.png" style="width: 12%; height: 12%; border: none"
+                title="Silvia Otaka Official LinkedIn Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_mail.png" style="width: 12%; height: 12%; border: none"
+                title="Silvia Otaka Official Mail Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_web.png" style="width: 12%; height: 12%; border: none"
+                title="Silvia Otaka Official Web Page" /></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="./img/TeamMember04.png" alt="..." />
+            <h4>Gwen Stacy</h4>
+            <p class="text-muted">Lead Marketer</p>
+            <a href="#"><img class="mx-auto" src="./img/icon_linkedin.png" style="width: 12%; height: 12%; border: none"
+                title="Gwen Stacy Official LinkedIn Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_mail.png" style="width: 12%; height: 12%; border: none"
+                title="Gwen Stacy Official Mail Account" /></a>
+            <a href="#"><img class="mx-auto" src="./img/icon_web.png" style="width: 12%; height: 12%; border: none"
+                title="Gwen Stacy Official Web Page" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <p class="large text-muted">
+            Proveemos soluciones integrales e inteligentes a nuestros
+            clientes, <br />
+            ayudándolos a lograr una ventaja competitiva sustentable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= End About us Section ======= -->
+
+  <!-- ======= Contact us Section ======= -->
+
+  <section class="contact-form" id="contact-form">
+    <!-- <section class="ftco-section"> -->
+    <div class="container">
+      <br>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section" id="contactanos-form">CONTÁCTANOS</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="wrapper img" style="background-image: url(img/contact-us-02.jpg)">
+            <div class="row">
+              <div class="col-md-9 col-lg-7">
+                <div class="contact-wrap w-100 p-md-5 p-4">
+                  <h3 class="mb-4">Envíenos su consulta</h3>
+                  <div id="form-message-warning" class="mb-4"></div>
+                  <div id="form-message-success" class="mb-4">
+                    Su mensaje ha sido enviado. ¡Muchas gracias!
+                  </div>
+                  <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label" for="name">Nombre y Apellido</label>
+                          <input type="text" class="form-control" name="name" id="name"
+                            placeholder="Nombre y Apellido" />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label" for="email">Email</label>
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="label" for="subject">Asunto</label>
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" />
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="label" for="#">Mensaje</label>
+                          <textarea name="message" class="form-control" id="message" cols="30" rows="4"
+                            placeholder="Escriba su mensaje aquí..."></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <br><br>
+                          <input type="submit" value="Enviar mensaje" class="btn btn-secondary" />
+                          <div class="submitting"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
   <br><br><br><br><br><br>
-  <!-- ======= END CONTACT US SECTION ======= -->
-
+  <!-- ======= End Contact us Section ======= -->
+  </div>
   <!-- =======  FOOTER =======  -->
   <footer th:replace="utilities::footer"></footer>
   <!-- =======  END FOOTER =======  -->
@@ -118,6 +259,13 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/main.js"></script>
   <!-- ======= End Bootstrap Javascript para Contact us Section ======= -->
+
+  <!-- FECHA -->
+  <script type="text/javascript">
+    var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Deciembre'];
+    var today = new Date();
+    document.getElementById("spanDate").innerHTML = today.getDate() + " de " + months[today.getMonth()] + ", " + today.getFullYear();
+  </script>
 
 </body>
 

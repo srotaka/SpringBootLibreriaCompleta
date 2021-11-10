@@ -3,6 +3,7 @@
  */
 package com.ejercicio02.services;
 
+import com.ejercicio02.entities.Cliente;
 import com.ejercicio02.entities.Libro;
 import com.ejercicio02.entities.Prestamo;
 import com.ejercicio02.repositories.ClienteRepositorio;
@@ -30,11 +31,17 @@ public class PrestamoService {
     public void crearPrestamo(String idLibro, String idCliente) throws Exception {
 
         Libro libro = libroRespositorio.findById(idLibro).orElse(null);
-
+        if (libro.getAlta()==false){
+            throw new Exception("EL LIBRO SE ENCUENTRA DADO DE BAJA.");
+        }
         if (libro.getEjemplaresRestantes() < 1) {
             throw new Exception("SIN EJEMPLARES DISPONIBLES");
         }
-
+        
+        Cliente cliente = clienteRepositorio.findById(idCliente).orElse(null);
+        if (cliente.getAlta()==false){
+            throw new Exception("EL CLIENTE SE ENCUENTRA DADO DE BAJA.");
+        }
         libro.setEjemplaresPrestados(libro.getEjemplaresPrestados() + 1);
         libro.setEjemplaresRestantes(libro.getEjemplaresRestantes() - 1);
         if (libro.getEjemplaresRestantes() < 1) {
@@ -45,17 +52,15 @@ public class PrestamoService {
         Prestamo prestamo = new Prestamo();
         prestamo.setFechaDevolucion(prestamo.getFechaPrestamo().plusWeeks(1));
         prestamo.setFechaPrestamo(LocalDate.now());
-        prestamo.setCliente(clienteRepositorio.findById(idCliente).orElse(null));
+        prestamo.setCliente(cliente);
         prestamo.setLibro(libro);
         prestamo.setAlta(true);
-
         prestamoRepositorio.save(prestamo);
-
     }
 
     @Transactional(readOnly = true)
     public List<Prestamo> buscarTodos() {
         return prestamoRepositorio.findAll();
     }
-
+    
 }

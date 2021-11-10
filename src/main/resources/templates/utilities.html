@@ -102,8 +102,15 @@
               Contáctanos
             </a>
           </li>
-
+          <li class="navbar-nav">
+            <div class="text-end">
+                <a class="btn btn-login float-right" th:href="@{/logout}">Cerrar Sesión</a>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;<span id="spanDate">today</span></div>
+          </li>
+        </ul>
       </div>
+    </div>
   </nav>
   <!-- END  NAVBAR INDEX -->
 
@@ -360,14 +367,14 @@
 
   <footer th:fragment="footer">
     <div class="footer py-1 light bg-light fixed-bottom">
-        <div class="copyright text-center">
-          &copy; Copyright 2000-2021 |
-         <img src="../../img/logo.png" width="200" height="40" /> 
-         | All rights reserved
-        </div>
+      <div class="copyright text-center">
+        &copy; Copyright 2000-2021 |
+        <img src="../../img/logo.png" width="200" height="40" />
+        | All rights reserved
       </div>
+    </div>
   </footer>
-  
+
 </body>
 
 </html>

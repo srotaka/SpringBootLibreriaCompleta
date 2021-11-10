@@ -25,7 +25,7 @@ public class Libro {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    @Column(nullable = false)
+    @Column(nullable = false) //updatable = false
     private Long isbn;
     @Column(nullable = false)
     private String titulo;

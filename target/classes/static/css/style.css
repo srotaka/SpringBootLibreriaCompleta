@@ -2,7 +2,7 @@ header.masthead {
   background-image: url(../img/landing02-min.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   padding-top: 10rem;
   padding-bottom: 8rem;
@@ -151,6 +151,7 @@ header.masthead .masthead-heading {
 /*-------------------------------------------------------------
 TEAM 
 -------------------------------------------------------------*/
+#team{margin-bottom: 1300p !important;}
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
@@ -170,16 +171,12 @@ TEAM
 /*-------------------------------------------------------------
 CONTACT US FORM
 -------------------------------------------------------------*/
-
-.wrapper {
+  .wrapper {
   width: 100%;
   overflow: hidden;
   border-radius: 5px;
   }
 
-/* .contact-form {
-  padding: 2rem 0;
-} */
 .contactForm .label {
   color: rgb(51, 49, 49);
   text-transform: uppercase;
@@ -256,7 +253,9 @@ body{
 a{
   text-decoration:none;
   color:#444444;
+  text-align: center;
 }
+
 .login-reg-panel{
     position: relative;
     top: 50%;
@@ -392,7 +391,7 @@ a{
 }
 a{
   text-decoration:none;
-  color:#2c7715;
+  color:#ff7b90;
 }
     
 /* ALTERNATIVO */
@@ -405,10 +404,12 @@ background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, 
 float:left;
 width:100%;
 padding : 50px 0;
+margin-top: 130px;
+margin-bottom: 60px;
 }
 .banner-sec{background:url(../img/login.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
 .banner-signup{background:url(../img/signup.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
-.container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+#container-login{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);} */
 .carousel-inner{border-radius:0 10px 10px 0;}
 .carousel-caption{text-align:left; left:5%;}
 .login-sec{padding: 50px 30px; position:relative;}
@@ -417,7 +418,7 @@ padding : 50px 0;
 .login-sec .copy-text a{color:#E36262;}
 .login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
 .login-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
-.btn-login{background: #DE6262; color:#fff; font-weight:600;}
+.btn-login{background: #DE6262!important; color:#fff !important; font-weight:300 !important;}
 .banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
 .banner-text h2{color:#ff7b90; font-weight:300;  font-family: "Carattere";font-size: 45px; }
 .banner-text p{color:#ff7b90; font-family: "Roboto";font-size: 20px; }
@@ -431,7 +432,13 @@ padding : 50px 0;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #fad0d2 !important;
 }
-
+#btn-logout{background-color:#E36262; color:#ffffff; font-family:"Roboto"; font-size: 20px;}
 
 /* CALENDAR */
-#spanDate{color:#ff7b90; font-family: "Roboto";font-size: 16px; text-transform: uppercase;}
+#spanDate{color:#ff7b90; font-family: "Roboto";font-size: 16px; text-transform: uppercase;margin-top: 8px}
+#pregunta{
+  font-size: 13px ;
+  color:#686464;
+  text-align: center !important;
+  margin-top: 8px;
+}

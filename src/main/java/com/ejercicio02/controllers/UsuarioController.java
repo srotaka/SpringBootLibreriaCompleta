@@ -33,7 +33,7 @@ public class UsuarioController {
             mav.addObject("error", "CORREO O CONTRASEÑA INCORRECTO");
         }
         if (logout != null) {
-            mav.addObject("logout", "SESIÓN FINALIZADA");
+            mav.addObject("logout", "Sesión Finalizada");
         }
         if (principal != null) {
             LOGGER.info("Principal -> {}", principal.getName());

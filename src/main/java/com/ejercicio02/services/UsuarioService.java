@@ -42,8 +42,6 @@ public class UsuarioService implements UserDetailsService {
         user.setApellido(apellido.toUpperCase());
         user.setCorreo(correo.toLowerCase());
         user.setClave(encoder.encode(clave));
-        user.setFechaCreacion(LocalDateTime.now());
-        user.setFechaModificacion(LocalDateTime.now());
         user.setAlta(true);
         usarioRepositorio.save(user);
     }
