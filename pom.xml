@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.Guia16SpringBoot_Ejericicio0</groupId>
-    <artifactId>com.Guia16SpringBoot_Ejericicio02</artifactId>
+    <artifactId>com.Guia16SpringBoot_BackUp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Guia16SpringBoot_Ejericicio02</name>
+    <name>Guia16SpringBoot_BackUp</name>
     <description>Guia 16 - Ejercicio02 - Libreria</description>
     <properties>
         <java.version>1.8</java.version>

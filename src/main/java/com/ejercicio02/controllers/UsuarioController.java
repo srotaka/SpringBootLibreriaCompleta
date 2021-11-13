@@ -63,12 +63,14 @@ public class UsuarioController {
     }
 
     @PostMapping("/registro")
-    public RedirectView signup(@RequestParam String nombre, @RequestParam String apellido, @RequestParam String correo, @RequestParam String clave, RedirectAttributes attributes) {
+    public RedirectView signup(@RequestParam String nombre, @RequestParam String apellido, @RequestParam String correo, @RequestParam String clave, RedirectAttributes attributes, HttpServletRequest request) {
         RedirectView redirectView = new RedirectView("/login");
 
         try {
             uService.crear(nombre, apellido, correo, clave);
             attributes.addFlashAttribute("exito", "SE HA REGISTRADO CON ÉXITO.");
+            request.login(correo, clave);
+            redirectView.setUrl("/index");
 
         } catch (Exception e) {
             attributes.addFlashAttribute("error", e.getMessage());

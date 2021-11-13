@@ -23,7 +23,7 @@ com\ejercicio02\repositories\AutorRepositorio.class
 com\ejercicio02\MainLibreria.class
 com\ejercicio02\controllers\ClienteController$AutorController.class
 com\ejercicio02\repositories\LibroRepositorio.class
-com\ejercicio02\services\ClienteService.class
 com\ejercicio02\entities\Prestamo.class
+com\ejercicio02\services\ClienteService.class
 com\ejercicio02\entities\Cliente.class
 com\ejercicio02\entities\Autor.class

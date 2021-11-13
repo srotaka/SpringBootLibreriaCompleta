@@ -34,7 +34,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-around fs-4" id="collapsibleNavbar">
-            <a class="nav-link" th:href="@{/}"><img th:src="@{/img/logo.png}" width="200" height="40"></a>
+            <a class="nav-link" th:href="@{/index}"><img th:src="@{/img/logo.png}" width="200" height="40"></a>
             <ul class="navbar-nav">
                 <div id="pregunta">¿Aún no tiene una cuenta?&nbsp;&nbsp;</div>
                 <div class="text-end">
@@ -89,10 +89,18 @@
                 </div>
             </div>
     </section>
-
+    <!-- ======= END FORMULARIO =======  -->
+    
+    <!-- ======= ERROR / ÉXITO ======= -->
     <div th:if="${error}" class="container mt-4 text-center">
         <div class="row col-md-4 mx-auto">
             <div th:text="${error}" class="alert alert-danger m-0 shadow"></div>
+        </div>
+    </div>
+    
+    <div th:if="${exito}" class="container mt-4 text-center">
+        <div class="row col-md-4 mx-auto">
+            <div th:text="${exito}" class="alert alert-danger m-0 shadow"></div>
         </div>
     </div>
     
@@ -102,9 +110,8 @@
         </div>
     </div>
 
-    <!-- ======= END FORMULARIO =======  -->
-    <div th:replace="utilities :: div-error"></div>
-    <div th:replace="utilities :: div-exito"></div>
+    <!-- ======= FIN ERROR / ÉXITO ======= -->
+
     <br><br><br><br><br>
 
     <!-- ======= FOOTER ======= -->
